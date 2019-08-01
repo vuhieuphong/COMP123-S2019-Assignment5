@@ -31,10 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.SelectLabel = new System.Windows.Forms.Label();
             this.HardwareSelectGridView = new System.Windows.Forms.DataGridView();
-            this.YourSelectionLabel = new System.Windows.Forms.Label();
-            this.SelectedHardwareTextBox = new System.Windows.Forms.TextBox();
-            this.SelectFormCancelButton = new System.Windows.Forms.Button();
-            this.NextButton = new System.Windows.Forms.Button();
             this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,6 +63,10 @@
             this.powerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.webcamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.YourSelectionLabel = new System.Windows.Forms.Label();
+            this.SelectedHardwareTextBox = new System.Windows.Forms.TextBox();
+            this.SelectFormCancelButton = new System.Windows.Forms.Button();
+            this.NextButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.HardwareSelectGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -126,59 +126,14 @@
             this.webcamDataGridViewTextBoxColumn});
             this.HardwareSelectGridView.DataSource = this.productBindingSource;
             this.HardwareSelectGridView.Location = new System.Drawing.Point(17, 41);
-            this.HardwareSelectGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HardwareSelectGridView.Margin = new System.Windows.Forms.Padding(2);
             this.HardwareSelectGridView.MultiSelect = false;
             this.HardwareSelectGridView.Name = "HardwareSelectGridView";
             this.HardwareSelectGridView.ReadOnly = true;
             this.HardwareSelectGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.HardwareSelectGridView.Size = new System.Drawing.Size(740, 379);
             this.HardwareSelectGridView.TabIndex = 1;
-            // 
-            // YourSelectionLabel
-            // 
-            this.YourSelectionLabel.BackColor = System.Drawing.SystemColors.Control;
-            this.YourSelectionLabel.Font = new System.Drawing.Font("Arial", 18F);
-            this.YourSelectionLabel.Location = new System.Drawing.Point(14, 438);
-            this.YourSelectionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.YourSelectionLabel.Name = "YourSelectionLabel";
-            this.YourSelectionLabel.Size = new System.Drawing.Size(177, 28);
-            this.YourSelectionLabel.TabIndex = 2;
-            this.YourSelectionLabel.Text = "Your Selection:";
-            // 
-            // SelectedHardwareTextBox
-            // 
-            this.SelectedHardwareTextBox.BackColor = System.Drawing.Color.White;
-            this.SelectedHardwareTextBox.Font = new System.Drawing.Font("Arial", 18F);
-            this.SelectedHardwareTextBox.Location = new System.Drawing.Point(186, 435);
-            this.SelectedHardwareTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.SelectedHardwareTextBox.Name = "SelectedHardwareTextBox";
-            this.SelectedHardwareTextBox.ReadOnly = true;
-            this.SelectedHardwareTextBox.Size = new System.Drawing.Size(571, 35);
-            this.SelectedHardwareTextBox.TabIndex = 3;
-            // 
-            // SelectFormCancelButton
-            // 
-            this.SelectFormCancelButton.Font = new System.Drawing.Font("Arial", 18F);
-            this.SelectFormCancelButton.Location = new System.Drawing.Point(461, 483);
-            this.SelectFormCancelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.SelectFormCancelButton.Name = "SelectFormCancelButton";
-            this.SelectFormCancelButton.Size = new System.Drawing.Size(112, 39);
-            this.SelectFormCancelButton.TabIndex = 4;
-            this.SelectFormCancelButton.Text = "Cancel";
-            this.SelectFormCancelButton.UseVisualStyleBackColor = true;
-            this.SelectFormCancelButton.Click += new System.EventHandler(this.CancelButton_Click);
-            // 
-            // NextButton
-            // 
-            this.NextButton.Font = new System.Drawing.Font("Arial", 18F);
-            this.NextButton.Location = new System.Drawing.Point(598, 483);
-            this.NextButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.NextButton.Name = "NextButton";
-            this.NextButton.Size = new System.Drawing.Size(112, 39);
-            this.NextButton.TabIndex = 5;
-            this.NextButton.Text = "Next";
-            this.NextButton.UseVisualStyleBackColor = true;
-            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
+            this.HardwareSelectGridView.SelectionChanged += new System.EventHandler(this.HardwareSelectGridView_SelectionChanged);
             // 
             // productIDDataGridViewTextBoxColumn
             // 
@@ -462,6 +417,53 @@
             // productBindingSource
             // 
             this.productBindingSource.DataSource = typeof(COMP123_S2019_Assignment5.Models.Product);
+            // 
+            // YourSelectionLabel
+            // 
+            this.YourSelectionLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.YourSelectionLabel.Font = new System.Drawing.Font("Arial", 18F);
+            this.YourSelectionLabel.Location = new System.Drawing.Point(14, 438);
+            this.YourSelectionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.YourSelectionLabel.Name = "YourSelectionLabel";
+            this.YourSelectionLabel.Size = new System.Drawing.Size(177, 28);
+            this.YourSelectionLabel.TabIndex = 2;
+            this.YourSelectionLabel.Text = "Your Selection:";
+            // 
+            // SelectedHardwareTextBox
+            // 
+            this.SelectedHardwareTextBox.BackColor = System.Drawing.Color.White;
+            this.SelectedHardwareTextBox.Font = new System.Drawing.Font("Arial", 18F);
+            this.SelectedHardwareTextBox.Location = new System.Drawing.Point(186, 435);
+            this.SelectedHardwareTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.SelectedHardwareTextBox.Name = "SelectedHardwareTextBox";
+            this.SelectedHardwareTextBox.ReadOnly = true;
+            this.SelectedHardwareTextBox.Size = new System.Drawing.Size(571, 35);
+            this.SelectedHardwareTextBox.TabIndex = 3;
+            this.SelectedHardwareTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // SelectFormCancelButton
+            // 
+            this.SelectFormCancelButton.Font = new System.Drawing.Font("Arial", 18F);
+            this.SelectFormCancelButton.Location = new System.Drawing.Point(461, 483);
+            this.SelectFormCancelButton.Margin = new System.Windows.Forms.Padding(2);
+            this.SelectFormCancelButton.Name = "SelectFormCancelButton";
+            this.SelectFormCancelButton.Size = new System.Drawing.Size(112, 39);
+            this.SelectFormCancelButton.TabIndex = 4;
+            this.SelectFormCancelButton.Text = "Cancel";
+            this.SelectFormCancelButton.UseVisualStyleBackColor = true;
+            this.SelectFormCancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            // 
+            // NextButton
+            // 
+            this.NextButton.Font = new System.Drawing.Font("Arial", 18F);
+            this.NextButton.Location = new System.Drawing.Point(598, 483);
+            this.NextButton.Margin = new System.Windows.Forms.Padding(2);
+            this.NextButton.Name = "NextButton";
+            this.NextButton.Size = new System.Drawing.Size(112, 39);
+            this.NextButton.TabIndex = 5;
+            this.NextButton.Text = "Next";
+            this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // SelectForm
             // 

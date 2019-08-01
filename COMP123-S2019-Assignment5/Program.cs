@@ -11,6 +11,7 @@ namespace COMP123_S2019_Assignment5
     {
         public static Dictionary<FormNames, Form> Forms;
         public static Product product;
+        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -28,7 +29,7 @@ namespace COMP123_S2019_Assignment5
             Forms.Add(FormNames.ORDER_FORM, new OrderForm());
             Forms.Add(FormNames.ABOUT_FORM, new AboutForm());
             product = new Product();
-
+           
             Application.Run(Forms[FormNames.SPLASH_SCREEN]);
         }
     }
