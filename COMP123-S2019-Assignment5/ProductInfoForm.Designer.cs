@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.ProductInfoMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -36,12 +35,10 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.selectAnotherProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.SelectAnotherProductButton = new System.Windows.Forms.Button();
-            this.CancelButton = new System.Windows.Forms.Button();
+            this.ProductInfoFormCancelButton = new System.Windows.Forms.Button();
             this.NextButton = new System.Windows.Forms.Button();
             this.ProductInfoMenuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // ProductInfoMenuStrip
@@ -109,15 +106,15 @@
             this.SelectAnotherProductButton.UseVisualStyleBackColor = true;
             this.SelectAnotherProductButton.Click += new System.EventHandler(this.SelectAnotherProductButton_Click);
             // 
-            // CancelButton
+            // ProductInfoFormCancelButton
             // 
-            this.CancelButton.Location = new System.Drawing.Point(423, 396);
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(112, 41);
-            this.CancelButton.TabIndex = 2;
-            this.CancelButton.Text = "Cancel";
-            this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.ProductInfoFormCancelButton.Location = new System.Drawing.Point(423, 396);
+            this.ProductInfoFormCancelButton.Name = "ProductInfoFormCancelButton";
+            this.ProductInfoFormCancelButton.Size = new System.Drawing.Size(112, 41);
+            this.ProductInfoFormCancelButton.TabIndex = 2;
+            this.ProductInfoFormCancelButton.Text = "Cancel";
+            this.ProductInfoFormCancelButton.UseVisualStyleBackColor = true;
+            this.ProductInfoFormCancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // NextButton
             // 
@@ -136,10 +133,11 @@
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.ControlBox = false;
             this.Controls.Add(this.NextButton);
-            this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.ProductInfoFormCancelButton);
             this.Controls.Add(this.SelectAnotherProductButton);
             this.Controls.Add(this.ProductInfoMenuStrip);
             this.Font = new System.Drawing.Font("Arial", 20F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.ProductInfoMenuStrip;
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "ProductInfoForm";
@@ -147,7 +145,6 @@
             this.Text = "Product Info Form";
             this.ProductInfoMenuStrip.ResumeLayout(false);
             this.ProductInfoMenuStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,9 +159,8 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem selectAnotherProductToolStripMenuItem;
-        private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Button SelectAnotherProductButton;
-        private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Button ProductInfoFormCancelButton;
         private System.Windows.Forms.Button NextButton;
     }
 }

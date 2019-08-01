@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,13 @@ namespace COMP123_S2019_Assignment5
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            ProductPrintForm.PrintAction = PrintAction.PrintToPreview;
+            ProductPrintForm.Print();
         }
     }
 }

@@ -13,6 +13,7 @@ namespace COMP123_S2019_Assignment5
         SELECT_FORM,
         PRODUCT_INFO_FORM,
         ORDER_FORM,
-        FORM_NUM
+        FORM_NUM,
+        ABOUT_FORM
     }
 }

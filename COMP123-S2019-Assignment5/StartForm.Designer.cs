@@ -84,6 +84,7 @@
             this.Controls.Add(this.LoadOrderButton);
             this.Controls.Add(this.StartOrderButton);
             this.Font = new System.Drawing.Font("Arial", 20F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "StartForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
