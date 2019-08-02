@@ -37,7 +37,7 @@
             // 
             // StartOrderButton
             // 
-            this.StartOrderButton.Location = new System.Drawing.Point(83, 372);
+            this.StartOrderButton.Location = new System.Drawing.Point(87, 387);
             this.StartOrderButton.Name = "StartOrderButton";
             this.StartOrderButton.Size = new System.Drawing.Size(276, 47);
             this.StartOrderButton.TabIndex = 0;
@@ -47,7 +47,7 @@
             // 
             // LoadOrderButton
             // 
-            this.LoadOrderButton.Location = new System.Drawing.Point(394, 372);
+            this.LoadOrderButton.Location = new System.Drawing.Point(398, 387);
             this.LoadOrderButton.Name = "LoadOrderButton";
             this.LoadOrderButton.Size = new System.Drawing.Size(276, 47);
             this.LoadOrderButton.TabIndex = 1;
@@ -57,7 +57,7 @@
             // 
             // ExitProgramButton
             // 
-            this.ExitProgramButton.Location = new System.Drawing.Point(239, 445);
+            this.ExitProgramButton.Location = new System.Drawing.Point(243, 460);
             this.ExitProgramButton.Name = "ExitProgramButton";
             this.ExitProgramButton.Size = new System.Drawing.Size(276, 47);
             this.ExitProgramButton.TabIndex = 2;
@@ -67,7 +67,7 @@
             // 
             // StartPictureBox
             // 
-            this.StartPictureBox.Location = new System.Drawing.Point(83, 23);
+            this.StartPictureBox.Location = new System.Drawing.Point(87, 38);
             this.StartPictureBox.Name = "StartPictureBox";
             this.StartPictureBox.Size = new System.Drawing.Size(587, 323);
             this.StartPictureBox.TabIndex = 3;

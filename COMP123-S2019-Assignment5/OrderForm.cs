@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
@@ -18,6 +17,17 @@ namespace COMP123_S2019_Assignment5
             InitializeComponent();
         }
 
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProductPrintForm.PrintAction = PrintAction.PrintToPreview;
+            ProductPrintForm.Print();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.Forms[FormNames.ABOUT_FORM].ShowDialog();
+        }
+
         private void BackButton_Click(object sender, EventArgs e)
         {
             Program.Forms[FormNames.PRODUCT_INFO_FORM].Show();
@@ -29,16 +39,19 @@ namespace COMP123_S2019_Assignment5
             Application.Exit();
         }
 
-        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        private void FinishButton_Click(object sender, EventArgs e)
         {
-            
-            ProductPrintForm.PrintAction = PrintAction.PrintToPreview;
-            ProductPrintForm.Print();
+            MessageBox.Show("Thank you for ordering with us!\n" +
+                "Your order will arrive in 7-10 business days."
+                , "Thank You!", MessageBoxButtons.OK);
+            Application.Exit();
         }
 
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void OrderForm_Activated(object sender, EventArgs e)
         {
-            Program.Forms[FormNames.ABOUT_FORM].ShowDialog();
+            PriceButton.Text = "$" + Program.product.cost.ToString();
+            SalesTaxButton.Text = "$" + (Program.product.cost * 13 / 100).ToString();
+            TotalPriceButton.Text = "$" + (Program.product.cost * 113 / 100).ToString();
         }
     }
 }

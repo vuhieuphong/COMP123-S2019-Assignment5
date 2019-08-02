@@ -125,13 +125,13 @@
             this.powerDataGridViewTextBoxColumn,
             this.webcamDataGridViewTextBoxColumn});
             this.HardwareSelectGridView.DataSource = this.productBindingSource;
-            this.HardwareSelectGridView.Location = new System.Drawing.Point(17, 41);
+            this.HardwareSelectGridView.Location = new System.Drawing.Point(43, 41);
             this.HardwareSelectGridView.Margin = new System.Windows.Forms.Padding(2);
             this.HardwareSelectGridView.MultiSelect = false;
             this.HardwareSelectGridView.Name = "HardwareSelectGridView";
             this.HardwareSelectGridView.ReadOnly = true;
             this.HardwareSelectGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.HardwareSelectGridView.Size = new System.Drawing.Size(740, 379);
+            this.HardwareSelectGridView.Size = new System.Drawing.Size(895, 526);
             this.HardwareSelectGridView.TabIndex = 1;
             this.HardwareSelectGridView.SelectionChanged += new System.EventHandler(this.HardwareSelectGridView_SelectionChanged);
             // 
@@ -422,7 +422,7 @@
             // 
             this.YourSelectionLabel.BackColor = System.Drawing.SystemColors.Control;
             this.YourSelectionLabel.Font = new System.Drawing.Font("Arial", 18F);
-            this.YourSelectionLabel.Location = new System.Drawing.Point(14, 438);
+            this.YourSelectionLabel.Location = new System.Drawing.Point(112, 598);
             this.YourSelectionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.YourSelectionLabel.Name = "YourSelectionLabel";
             this.YourSelectionLabel.Size = new System.Drawing.Size(177, 28);
@@ -433,7 +433,7 @@
             // 
             this.SelectedHardwareTextBox.BackColor = System.Drawing.Color.White;
             this.SelectedHardwareTextBox.Font = new System.Drawing.Font("Arial", 18F);
-            this.SelectedHardwareTextBox.Location = new System.Drawing.Point(186, 435);
+            this.SelectedHardwareTextBox.Location = new System.Drawing.Point(284, 595);
             this.SelectedHardwareTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.SelectedHardwareTextBox.Name = "SelectedHardwareTextBox";
             this.SelectedHardwareTextBox.ReadOnly = true;
@@ -444,7 +444,7 @@
             // SelectFormCancelButton
             // 
             this.SelectFormCancelButton.Font = new System.Drawing.Font("Arial", 18F);
-            this.SelectFormCancelButton.Location = new System.Drawing.Point(461, 483);
+            this.SelectFormCancelButton.Location = new System.Drawing.Point(606, 663);
             this.SelectFormCancelButton.Margin = new System.Windows.Forms.Padding(2);
             this.SelectFormCancelButton.Name = "SelectFormCancelButton";
             this.SelectFormCancelButton.Size = new System.Drawing.Size(112, 39);
@@ -456,7 +456,7 @@
             // NextButton
             // 
             this.NextButton.Font = new System.Drawing.Font("Arial", 18F);
-            this.NextButton.Location = new System.Drawing.Point(598, 483);
+            this.NextButton.Location = new System.Drawing.Point(743, 663);
             this.NextButton.Margin = new System.Windows.Forms.Padding(2);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(112, 39);
@@ -469,7 +469,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(984, 761);
             this.ControlBox = false;
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.SelectFormCancelButton);

@@ -27,7 +27,7 @@ namespace COMP123_S2019_Assignment5
         private void NextButton_Click(object sender, EventArgs e)
         {
             Program.Forms[FormNames.PRODUCT_INFO_FORM].Show();
-            this.Hide();
+            this.Hide();           
         }
 
         private void SelectForm_Load(object sender, EventArgs e)
@@ -37,6 +37,12 @@ namespace COMP123_S2019_Assignment5
                 db.products.Load();
                 productBindingSource.DataSource = db.products.Local.ToBindingList();
             }
+            for (int i = 0; i < HardwareSelectGridView.Rows.Count; i++)
+            {
+                HardwareSelectGridView.Rows[i].Selected = false;
+            }
+            SelectedHardwareTextBox.Text=string.Empty;
+            NextButton.Enabled = false;
         }
 
         private void HardwareSelectGridView_SelectionChanged(object sender, EventArgs e)
@@ -48,7 +54,7 @@ namespace COMP123_S2019_Assignment5
                 var cells = rows[rowIndex].Cells;
                 var columnCount = HardwareSelectGridView.ColumnCount;
 
-                HardwareSelectGridView.Rows[rowIndex].Selected = true;
+                NextButton.Enabled = true;
 
                 string outputString = string.Empty;
                 outputString = cells[2].Value.ToString()+" "+cells[3].Value.ToString()+" Priced at: $"+cells[1].Value.ToString();
@@ -85,7 +91,13 @@ namespace COMP123_S2019_Assignment5
                 Program.product.moust_type = cells[28].Value.ToString();
                 Program.product.power = cells[29].Value.ToString();
                 Program.product.webcam = cells[30].Value.ToString();
-            }           
+            }
+        }
+
+        private void SelectForm_Shown(object sender, EventArgs e)
+        {
+            HardwareSelectGridView.ClearSelection();
+            HardwareSelectGridView.Rows[0].Cells[0].Selected = false;
         }
     }
 }

@@ -20,7 +20,7 @@ namespace COMP123_S2019_Assignment5
         private void StartOrderButton_Click(object sender, EventArgs e)
         {
             Program.Forms[FormNames.SELECT_FORM].Show();
-            this.Hide();
+            this.Hide();   
         }
 
         private void LoadOrderButton_Click(object sender, EventArgs e)
