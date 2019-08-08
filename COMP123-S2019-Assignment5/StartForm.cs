@@ -25,8 +25,11 @@ namespace COMP123_S2019_Assignment5
 
         private void LoadOrderButton_Click(object sender, EventArgs e)
         {
-            Program.Forms[FormNames.PRODUCT_INFO_FORM].Show();
+            var myInfoForm = Program.Forms[FormNames.PRODUCT_INFO_FORM] as ProductInfoForm;
+            myInfoForm.Show();
             this.Hide();
+            myInfoForm.openToolStripMenuItem_Click(sender, e);   
+            
         }
 
         private void ExitProgramButton_Click(object sender, EventArgs e)

@@ -97,9 +97,9 @@
         #endregion
 
         private System.Windows.Forms.Button StartOrderButton;
-        private System.Windows.Forms.Button LoadOrderButton;
         private System.Windows.Forms.Button ExitProgramButton;
         private System.Windows.Forms.PictureBox StartPictureBox;
+        public System.Windows.Forms.Button LoadOrderButton;
     }
 }
 

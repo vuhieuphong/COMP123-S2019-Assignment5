@@ -17,7 +17,7 @@ namespace COMP123_S2019_Assignment5
         {
             InitializeComponent();
         }
-
+        
         private void SelectAnotherProductButton_Click(object sender, EventArgs e)
         {
             Program.Forms[FormNames.SELECT_FORM].Show();
@@ -132,8 +132,8 @@ namespace COMP123_S2019_Assignment5
                 NextButton.Enabled = true;
             }
         }
-
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        
+        public void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // configure the file dialog
 
@@ -194,6 +194,15 @@ namespace COMP123_S2019_Assignment5
                 catch (IOException exception)
                 {
                     MessageBox.Show("Error: " + exception.Message, "File I/O Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                if(ProductIDButton.Text=="0")
+                {
+                    MessageBox.Show("Please restart your order!");
+                    Program.Forms[FormNames.START_FORM].Show();
+                    this.Hide();
                 }
             }
         }

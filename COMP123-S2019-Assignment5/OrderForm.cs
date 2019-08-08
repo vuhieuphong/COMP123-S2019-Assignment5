@@ -52,6 +52,23 @@ namespace COMP123_S2019_Assignment5
             PriceButton.Text = "$" + Program.product.cost.ToString();
             SalesTaxButton.Text = "$" + (Program.product.cost * 13 / 100).ToString();
             TotalPriceButton.Text = "$" + (Program.product.cost * 113 / 100).ToString();
+
+            ConditionButton.Text = Program.product.condition;
+            ManufacturerButton.Text = Program.product.manufacturer;
+            PlatformButton.Text = Program.product.platform;
+            ModelButton.Text = Program.product.model;
+
+            SystemComponentsButton.Text = Program.product.displaytype+ "\n\n"
+                                        + Program.product.screensize+ "\n\n"
+                                        + Program.product.CPU_type + "\n\n"
+                                        + Program.product.CPU_number + "\n\n"
+                                        + Program.product.CPU_speed + "\n\n"
+                                        + Program.product.HDD_size + "\n\n"
+                                        + Program.product.HDD_speed + "\n\n"
+                                        + Program.product.GPU_Type + "\n\n"
+                                        + Program.product.webcam + "\n\n"
+                                        + Program.product.OS + "\n\n"
+                                        ;
         }
     }
 }
