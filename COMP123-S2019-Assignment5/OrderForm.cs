@@ -7,7 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/// <summary>
+/// APP NAME: Dollar Computer
+/// AUTHOR'S NAME: Vu Hieu Phong
+/// STUDENT ID: 301049781
+/// APP CREATION DATE: August 13th 2018
+/// APP DESCRIPTION: This app helps to develop a hardware buying UI
+/// this is the form that displays the user's order
+/// </summary>
 namespace COMP123_S2019_Assignment5
 {
     public partial class OrderForm : Form
@@ -16,37 +23,65 @@ namespace COMP123_S2019_Assignment5
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// this is the event handler for the click event of print tool strip menu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ProductPrintForm.PrintAction = PrintAction.PrintToPreview;
             ProductPrintForm.Print();
         }
-
+        /// <summary>
+        /// this is the event handler for the click event of about tool strip menu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Program.Forms[FormNames.ABOUT_FORM].ShowDialog();
         }
 
+        /// <summary>
+        /// this is the event handler for the click event of the back button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BackButton_Click(object sender, EventArgs e)
         {
             Program.Forms[FormNames.PRODUCT_INFO_FORM].Show();
             this.Hide();
         }
 
+        /// <summary>
+        /// this is the event handler for the click event of the cancel button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// this  is the event handler for the click event of the finish button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FinishButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Thank you for ordering with us!\n" +
+            MessageBox.Show("Thank you for ordering with us!\n\n" +
                 "Your order will arrive in 7-10 business days."
                 , "Thank You!", MessageBoxButtons.OK);
             Application.Exit();
         }
 
+        /// <summary>
+        /// this is the event handler for the activated event of the order form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OrderForm_Activated(object sender, EventArgs e)
         {
             PriceButton.Text = "$" + Program.product.cost.ToString();

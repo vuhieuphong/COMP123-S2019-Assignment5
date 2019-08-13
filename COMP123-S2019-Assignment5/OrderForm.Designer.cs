@@ -51,8 +51,12 @@
             this.YourPriceLineShape = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.YourPriceGroupBox = new System.Windows.Forms.GroupBox();
             this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.ProductPictureBox = new System.Windows.Forms.PictureBox();
             this.SystemComponentsGroupBox = new System.Windows.Forms.GroupBox();
+            this.OSLabel = new System.Windows.Forms.Label();
+            this.WebcamLabel = new System.Windows.Forms.Label();
+            this.GPUTypeLabel = new System.Windows.Forms.Label();
+            this.HDDSpeedLabel = new System.Windows.Forms.Label();
+            this.HDDSizeLabel = new System.Windows.Forms.Label();
             this.CPUSpeedLabel = new System.Windows.Forms.Label();
             this.CPUNumberLabel = new System.Windows.Forms.Label();
             this.CPUTypeLabel = new System.Windows.Forms.Label();
@@ -67,15 +71,11 @@
             this.ManufacturerLabel = new System.Windows.Forms.Label();
             this.ConditionButton = new System.Windows.Forms.Button();
             this.ConditionLabel = new System.Windows.Forms.Label();
-            this.HDDSizeLabel = new System.Windows.Forms.Label();
-            this.HDDSpeedLabel = new System.Windows.Forms.Label();
-            this.GPUTypeLabel = new System.Windows.Forms.Label();
-            this.WebcamLabel = new System.Windows.Forms.Label();
-            this.OSLabel = new System.Windows.Forms.Label();
+            this.ProductPictureBox = new System.Windows.Forms.PictureBox();
             this.OrderMenuStrip.SuspendLayout();
             this.YourPriceGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductPictureBox)).BeginInit();
             this.SystemComponentsGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // OrderMenuStrip
@@ -97,19 +97,21 @@
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
+            this.fileToolStripMenuItem.Text = "&File";
             // 
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
-            this.printToolStripMenuItem.Text = "Print";
+            this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.printToolStripMenuItem.Text = "&Print";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.CancelButton_Click);
             // 
@@ -119,13 +121,15 @@
             this.backToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Text = "&Edit";
             // 
             // backToolStripMenuItem
             // 
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
-            this.backToolStripMenuItem.Text = "Back";
+            this.backToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.backToolStripMenuItem.Text = "&Back";
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -133,13 +137,14 @@
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Text = "&Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.aboutToolStripMenuItem.Text = "&About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // ProductPrintForm
@@ -152,10 +157,10 @@
             // 
             // BackButton
             // 
-            this.BackButton.Font = new System.Drawing.Font("Arial", 20F);
-            this.BackButton.Location = new System.Drawing.Point(556, 637);
+            this.BackButton.Font = new System.Drawing.Font("Arial", 16F);
+            this.BackButton.Location = new System.Drawing.Point(576, 637);
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(121, 44);
+            this.BackButton.Size = new System.Drawing.Size(127, 44);
             this.BackButton.TabIndex = 1;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
@@ -163,30 +168,35 @@
             // 
             // OrderCancelButton
             // 
-            this.OrderCancelButton.Font = new System.Drawing.Font("Arial", 20F);
-            this.OrderCancelButton.Location = new System.Drawing.Point(704, 637);
+            this.OrderCancelButton.BackColor = System.Drawing.Color.Orange;
+            this.OrderCancelButton.Font = new System.Drawing.Font("Arial", 16F);
+            this.OrderCancelButton.ForeColor = System.Drawing.Color.White;
+            this.OrderCancelButton.Location = new System.Drawing.Point(709, 637);
             this.OrderCancelButton.Name = "OrderCancelButton";
             this.OrderCancelButton.Size = new System.Drawing.Size(121, 44);
             this.OrderCancelButton.TabIndex = 2;
             this.OrderCancelButton.Text = "Cancel";
-            this.OrderCancelButton.UseVisualStyleBackColor = true;
+            this.OrderCancelButton.UseVisualStyleBackColor = false;
             this.OrderCancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // FinishButton
             // 
-            this.FinishButton.Font = new System.Drawing.Font("Arial", 20F);
-            this.FinishButton.Location = new System.Drawing.Point(848, 637);
+            this.FinishButton.BackColor = System.Drawing.Color.YellowGreen;
+            this.FinishButton.Font = new System.Drawing.Font("Arial", 16F);
+            this.FinishButton.ForeColor = System.Drawing.Color.White;
+            this.FinishButton.Location = new System.Drawing.Point(836, 637);
             this.FinishButton.Name = "FinishButton";
             this.FinishButton.Size = new System.Drawing.Size(121, 44);
             this.FinishButton.TabIndex = 3;
             this.FinishButton.Text = "Finish";
-            this.FinishButton.UseVisualStyleBackColor = true;
+            this.FinishButton.UseVisualStyleBackColor = false;
             this.FinishButton.Click += new System.EventHandler(this.FinishButton_Click);
             // 
             // PriceLabel
             // 
             this.PriceLabel.AutoSize = true;
             this.PriceLabel.Font = new System.Drawing.Font("Arial", 14F);
+            this.PriceLabel.ForeColor = System.Drawing.Color.White;
             this.PriceLabel.Location = new System.Drawing.Point(149, 39);
             this.PriceLabel.Name = "PriceLabel";
             this.PriceLabel.Size = new System.Drawing.Size(59, 22);
@@ -219,6 +229,7 @@
             // 
             this.SalesTaxLabel.AutoSize = true;
             this.SalesTaxLabel.Font = new System.Drawing.Font("Arial", 14F);
+            this.SalesTaxLabel.ForeColor = System.Drawing.Color.White;
             this.SalesTaxLabel.Location = new System.Drawing.Point(55, 88);
             this.SalesTaxLabel.Name = "SalesTaxLabel";
             this.SalesTaxLabel.Size = new System.Drawing.Size(153, 22);
@@ -240,6 +251,7 @@
             // 
             this.TotalPriceLabel.AutoSize = true;
             this.TotalPriceLabel.Font = new System.Drawing.Font("Arial", 14F);
+            this.TotalPriceLabel.ForeColor = System.Drawing.Color.White;
             this.TotalPriceLabel.Location = new System.Drawing.Point(104, 170);
             this.TotalPriceLabel.Name = "TotalPriceLabel";
             this.TotalPriceLabel.Size = new System.Drawing.Size(104, 22);
@@ -248,6 +260,7 @@
             // 
             // YourPriceLineShape
             // 
+            this.YourPriceLineShape.BorderColor = System.Drawing.Color.Orange;
             this.YourPriceLineShape.BorderWidth = 2;
             this.YourPriceLineShape.Name = "YourPriceLineShape";
             this.YourPriceLineShape.X1 = 23;
@@ -265,6 +278,7 @@
             this.YourPriceGroupBox.Controls.Add(this.SalesTaxLabel);
             this.YourPriceGroupBox.Controls.Add(this.shapeContainer2);
             this.YourPriceGroupBox.Font = new System.Drawing.Font("Arial", 14F);
+            this.YourPriceGroupBox.ForeColor = System.Drawing.Color.Orange;
             this.YourPriceGroupBox.Location = new System.Drawing.Point(576, 361);
             this.YourPriceGroupBox.Name = "YourPriceGroupBox";
             this.YourPriceGroupBox.Size = new System.Drawing.Size(384, 223);
@@ -282,14 +296,6 @@
             this.shapeContainer2.Size = new System.Drawing.Size(378, 195);
             this.shapeContainer2.TabIndex = 10;
             this.shapeContainer2.TabStop = false;
-            // 
-            // ProductPictureBox
-            // 
-            this.ProductPictureBox.Location = new System.Drawing.Point(576, 82);
-            this.ProductPictureBox.Name = "ProductPictureBox";
-            this.ProductPictureBox.Size = new System.Drawing.Size(384, 235);
-            this.ProductPictureBox.TabIndex = 12;
-            this.ProductPictureBox.TabStop = false;
             // 
             // SystemComponentsGroupBox
             // 
@@ -313,6 +319,7 @@
             this.SystemComponentsGroupBox.Controls.Add(this.ConditionButton);
             this.SystemComponentsGroupBox.Controls.Add(this.ConditionLabel);
             this.SystemComponentsGroupBox.Font = new System.Drawing.Font("Arial", 14F);
+            this.SystemComponentsGroupBox.ForeColor = System.Drawing.Color.Orange;
             this.SystemComponentsGroupBox.Location = new System.Drawing.Point(25, 70);
             this.SystemComponentsGroupBox.Name = "SystemComponentsGroupBox";
             this.SystemComponentsGroupBox.Size = new System.Drawing.Size(525, 646);
@@ -320,9 +327,60 @@
             this.SystemComponentsGroupBox.TabStop = false;
             this.SystemComponentsGroupBox.Text = "SystemComponents";
             // 
+            // OSLabel
+            // 
+            this.OSLabel.AutoSize = true;
+            this.OSLabel.ForeColor = System.Drawing.Color.White;
+            this.OSLabel.Location = new System.Drawing.Point(82, 567);
+            this.OSLabel.Name = "OSLabel";
+            this.OSLabel.Size = new System.Drawing.Size(43, 22);
+            this.OSLabel.TabIndex = 28;
+            this.OSLabel.Text = "OS:";
+            // 
+            // WebcamLabel
+            // 
+            this.WebcamLabel.AutoSize = true;
+            this.WebcamLabel.ForeColor = System.Drawing.Color.White;
+            this.WebcamLabel.Location = new System.Drawing.Point(36, 521);
+            this.WebcamLabel.Name = "WebcamLabel";
+            this.WebcamLabel.Size = new System.Drawing.Size(92, 22);
+            this.WebcamLabel.TabIndex = 27;
+            this.WebcamLabel.Text = "Webcam:";
+            // 
+            // GPUTypeLabel
+            // 
+            this.GPUTypeLabel.AutoSize = true;
+            this.GPUTypeLabel.ForeColor = System.Drawing.Color.White;
+            this.GPUTypeLabel.Location = new System.Drawing.Point(25, 479);
+            this.GPUTypeLabel.Name = "GPUTypeLabel";
+            this.GPUTypeLabel.Size = new System.Drawing.Size(103, 22);
+            this.GPUTypeLabel.TabIndex = 26;
+            this.GPUTypeLabel.Text = "GPU Type:";
+            // 
+            // HDDSpeedLabel
+            // 
+            this.HDDSpeedLabel.AutoSize = true;
+            this.HDDSpeedLabel.ForeColor = System.Drawing.Color.White;
+            this.HDDSpeedLabel.Location = new System.Drawing.Point(10, 432);
+            this.HDDSpeedLabel.Name = "HDDSpeedLabel";
+            this.HDDSpeedLabel.Size = new System.Drawing.Size(118, 22);
+            this.HDDSpeedLabel.TabIndex = 25;
+            this.HDDSpeedLabel.Text = "HDD Speed:";
+            // 
+            // HDDSizeLabel
+            // 
+            this.HDDSizeLabel.AutoSize = true;
+            this.HDDSizeLabel.ForeColor = System.Drawing.Color.White;
+            this.HDDSizeLabel.Location = new System.Drawing.Point(30, 385);
+            this.HDDSizeLabel.Name = "HDDSizeLabel";
+            this.HDDSizeLabel.Size = new System.Drawing.Size(98, 22);
+            this.HDDSizeLabel.TabIndex = 24;
+            this.HDDSizeLabel.Text = "HDD Size:";
+            // 
             // CPUSpeedLabel
             // 
             this.CPUSpeedLabel.AutoSize = true;
+            this.CPUSpeedLabel.ForeColor = System.Drawing.Color.White;
             this.CPUSpeedLabel.Location = new System.Drawing.Point(8, 344);
             this.CPUSpeedLabel.Name = "CPUSpeedLabel";
             this.CPUSpeedLabel.Size = new System.Drawing.Size(117, 22);
@@ -332,6 +390,7 @@
             // CPUNumberLabel
             // 
             this.CPUNumberLabel.AutoSize = true;
+            this.CPUNumberLabel.ForeColor = System.Drawing.Color.White;
             this.CPUNumberLabel.Location = new System.Drawing.Point(1, 300);
             this.CPUNumberLabel.Name = "CPUNumberLabel";
             this.CPUNumberLabel.Size = new System.Drawing.Size(127, 22);
@@ -341,6 +400,7 @@
             // CPUTypeLabel
             // 
             this.CPUTypeLabel.AutoSize = true;
+            this.CPUTypeLabel.ForeColor = System.Drawing.Color.White;
             this.CPUTypeLabel.Location = new System.Drawing.Point(26, 257);
             this.CPUTypeLabel.Name = "CPUTypeLabel";
             this.CPUTypeLabel.Size = new System.Drawing.Size(102, 22);
@@ -350,6 +410,7 @@
             // ScreenSizeLabel
             // 
             this.ScreenSizeLabel.AutoSize = true;
+            this.ScreenSizeLabel.ForeColor = System.Drawing.Color.White;
             this.ScreenSizeLabel.Location = new System.Drawing.Point(10, 211);
             this.ScreenSizeLabel.Name = "ScreenSizeLabel";
             this.ScreenSizeLabel.Size = new System.Drawing.Size(118, 22);
@@ -359,6 +420,7 @@
             // DisplayTypeLabel
             // 
             this.DisplayTypeLabel.AutoSize = true;
+            this.DisplayTypeLabel.ForeColor = System.Drawing.Color.White;
             this.DisplayTypeLabel.Location = new System.Drawing.Point(4, 170);
             this.DisplayTypeLabel.Name = "DisplayTypeLabel";
             this.DisplayTypeLabel.Size = new System.Drawing.Size(124, 22);
@@ -372,7 +434,7 @@
             this.SystemComponentsButton.Font = new System.Drawing.Font("Arial", 14F);
             this.SystemComponentsButton.Location = new System.Drawing.Point(131, 166);
             this.SystemComponentsButton.Name = "SystemComponentsButton";
-            this.SystemComponentsButton.Size = new System.Drawing.Size(378, 445);
+            this.SystemComponentsButton.Size = new System.Drawing.Size(368, 445);
             this.SystemComponentsButton.TabIndex = 18;
             this.SystemComponentsButton.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.SystemComponentsButton.UseVisualStyleBackColor = false;
@@ -382,16 +444,17 @@
             this.ModelButton.BackColor = System.Drawing.Color.White;
             this.ModelButton.Enabled = false;
             this.ModelButton.Font = new System.Drawing.Font("Arial", 14F);
-            this.ModelButton.Location = new System.Drawing.Point(364, 98);
+            this.ModelButton.Location = new System.Drawing.Point(378, 98);
             this.ModelButton.Name = "ModelButton";
-            this.ModelButton.Size = new System.Drawing.Size(121, 33);
+            this.ModelButton.Size = new System.Drawing.Size(141, 33);
             this.ModelButton.TabIndex = 17;
             this.ModelButton.UseVisualStyleBackColor = false;
             // 
             // ModelLabel
             // 
             this.ModelLabel.AutoSize = true;
-            this.ModelLabel.Location = new System.Drawing.Point(291, 103);
+            this.ModelLabel.ForeColor = System.Drawing.Color.White;
+            this.ModelLabel.Location = new System.Drawing.Point(305, 103);
             this.ModelLabel.Name = "ModelLabel";
             this.ModelLabel.Size = new System.Drawing.Size(67, 22);
             this.ModelLabel.TabIndex = 16;
@@ -404,13 +467,14 @@
             this.PlatformButton.Font = new System.Drawing.Font("Arial", 14F);
             this.PlatformButton.Location = new System.Drawing.Point(107, 98);
             this.PlatformButton.Name = "PlatformButton";
-            this.PlatformButton.Size = new System.Drawing.Size(121, 33);
+            this.PlatformButton.Size = new System.Drawing.Size(135, 33);
             this.PlatformButton.TabIndex = 15;
             this.PlatformButton.UseVisualStyleBackColor = false;
             // 
             // PlatformLabel
             // 
             this.PlatformLabel.AutoSize = true;
+            this.PlatformLabel.ForeColor = System.Drawing.Color.White;
             this.PlatformLabel.Location = new System.Drawing.Point(15, 103);
             this.PlatformLabel.Name = "PlatformLabel";
             this.PlatformLabel.Size = new System.Drawing.Size(86, 22);
@@ -422,16 +486,17 @@
             this.ManufacturerButton.BackColor = System.Drawing.Color.White;
             this.ManufacturerButton.Enabled = false;
             this.ManufacturerButton.Font = new System.Drawing.Font("Arial", 14F);
-            this.ManufacturerButton.Location = new System.Drawing.Point(364, 49);
+            this.ManufacturerButton.Location = new System.Drawing.Point(378, 49);
             this.ManufacturerButton.Name = "ManufacturerButton";
-            this.ManufacturerButton.Size = new System.Drawing.Size(121, 33);
+            this.ManufacturerButton.Size = new System.Drawing.Size(141, 33);
             this.ManufacturerButton.TabIndex = 13;
             this.ManufacturerButton.UseVisualStyleBackColor = false;
             // 
             // ManufacturerLabel
             // 
             this.ManufacturerLabel.AutoSize = true;
-            this.ManufacturerLabel.Location = new System.Drawing.Point(234, 54);
+            this.ManufacturerLabel.ForeColor = System.Drawing.Color.White;
+            this.ManufacturerLabel.Location = new System.Drawing.Point(248, 54);
             this.ManufacturerLabel.Name = "ManufacturerLabel";
             this.ManufacturerLabel.Size = new System.Drawing.Size(124, 22);
             this.ManufacturerLabel.TabIndex = 12;
@@ -444,68 +509,35 @@
             this.ConditionButton.Font = new System.Drawing.Font("Arial", 14F);
             this.ConditionButton.Location = new System.Drawing.Point(107, 49);
             this.ConditionButton.Name = "ConditionButton";
-            this.ConditionButton.Size = new System.Drawing.Size(121, 33);
+            this.ConditionButton.Size = new System.Drawing.Size(135, 33);
             this.ConditionButton.TabIndex = 11;
             this.ConditionButton.UseVisualStyleBackColor = false;
             // 
             // ConditionLabel
             // 
             this.ConditionLabel.AutoSize = true;
+            this.ConditionLabel.ForeColor = System.Drawing.Color.White;
             this.ConditionLabel.Location = new System.Drawing.Point(6, 54);
             this.ConditionLabel.Name = "ConditionLabel";
             this.ConditionLabel.Size = new System.Drawing.Size(95, 22);
             this.ConditionLabel.TabIndex = 0;
             this.ConditionLabel.Text = "Condition:";
             // 
-            // HDDSizeLabel
+            // ProductPictureBox
             // 
-            this.HDDSizeLabel.AutoSize = true;
-            this.HDDSizeLabel.Location = new System.Drawing.Point(30, 385);
-            this.HDDSizeLabel.Name = "HDDSizeLabel";
-            this.HDDSizeLabel.Size = new System.Drawing.Size(98, 22);
-            this.HDDSizeLabel.TabIndex = 24;
-            this.HDDSizeLabel.Text = "HDD Size:";
-            // 
-            // HDDSpeedLabel
-            // 
-            this.HDDSpeedLabel.AutoSize = true;
-            this.HDDSpeedLabel.Location = new System.Drawing.Point(10, 432);
-            this.HDDSpeedLabel.Name = "HDDSpeedLabel";
-            this.HDDSpeedLabel.Size = new System.Drawing.Size(118, 22);
-            this.HDDSpeedLabel.TabIndex = 25;
-            this.HDDSpeedLabel.Text = "HDD Speed:";
-            // 
-            // GPUTypeLabel
-            // 
-            this.GPUTypeLabel.AutoSize = true;
-            this.GPUTypeLabel.Location = new System.Drawing.Point(25, 479);
-            this.GPUTypeLabel.Name = "GPUTypeLabel";
-            this.GPUTypeLabel.Size = new System.Drawing.Size(103, 22);
-            this.GPUTypeLabel.TabIndex = 26;
-            this.GPUTypeLabel.Text = "GPU Type:";
-            // 
-            // WebcamLabel
-            // 
-            this.WebcamLabel.AutoSize = true;
-            this.WebcamLabel.Location = new System.Drawing.Point(36, 521);
-            this.WebcamLabel.Name = "WebcamLabel";
-            this.WebcamLabel.Size = new System.Drawing.Size(92, 22);
-            this.WebcamLabel.TabIndex = 27;
-            this.WebcamLabel.Text = "Webcam:";
-            // 
-            // OSLabel
-            // 
-            this.OSLabel.AutoSize = true;
-            this.OSLabel.Location = new System.Drawing.Point(82, 567);
-            this.OSLabel.Name = "OSLabel";
-            this.OSLabel.Size = new System.Drawing.Size(43, 22);
-            this.OSLabel.TabIndex = 28;
-            this.OSLabel.Text = "OS:";
+            this.ProductPictureBox.Image = global::COMP123_S2019_Assignment5.Properties.Resources.personal_computer_0;
+            this.ProductPictureBox.Location = new System.Drawing.Point(576, 82);
+            this.ProductPictureBox.Name = "ProductPictureBox";
+            this.ProductPictureBox.Size = new System.Drawing.Size(384, 235);
+            this.ProductPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ProductPictureBox.TabIndex = 12;
+            this.ProductPictureBox.TabStop = false;
             // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(984, 761);
             this.ControlBox = false;
             this.Controls.Add(this.SystemComponentsGroupBox);
@@ -516,18 +548,19 @@
             this.Controls.Add(this.OrderMenuStrip);
             this.Controls.Add(this.YourPriceGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.OrderMenuStrip;
             this.Name = "OrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "OrderForm";
+            this.Text = "Order Information";
             this.Activated += new System.EventHandler(this.OrderForm_Activated);
             this.OrderMenuStrip.ResumeLayout(false);
             this.OrderMenuStrip.PerformLayout();
             this.YourPriceGroupBox.ResumeLayout(false);
             this.YourPriceGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductPictureBox)).EndInit();
             this.SystemComponentsGroupBox.ResumeLayout(false);
             this.SystemComponentsGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -556,7 +589,6 @@
         private Microsoft.VisualBasic.PowerPacks.LineShape YourPriceLineShape;
         private System.Windows.Forms.GroupBox YourPriceGroupBox;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
-        private System.Windows.Forms.PictureBox ProductPictureBox;
         private System.Windows.Forms.GroupBox SystemComponentsGroupBox;
         private System.Windows.Forms.Label ConditionLabel;
         private System.Windows.Forms.Button ConditionButton;
@@ -577,5 +609,6 @@
         private System.Windows.Forms.Label GPUTypeLabel;
         private System.Windows.Forms.Label WebcamLabel;
         private System.Windows.Forms.Label OSLabel;
+        private System.Windows.Forms.PictureBox ProductPictureBox;
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SplashScreen));
             this.SplashTimer = new System.Windows.Forms.Timer(this.components);
             this.SplashProgressBar = new System.Windows.Forms.ProgressBar();
             this.LogoPictureBox = new System.Windows.Forms.PictureBox();
@@ -52,7 +53,7 @@
             // 
             // LogoPictureBox
             // 
-            this.LogoPictureBox.Image = global::COMP123_S2019_Assignment5.Properties.Resources.computer_repair_489081568_5783c94e3df78c1e1f3e8664;
+            this.LogoPictureBox.Image = global::COMP123_S2019_Assignment5.Properties.Resources._459176_dell_precision_5720_aio;
             this.LogoPictureBox.Location = new System.Drawing.Point(35, 126);
             this.LogoPictureBox.Name = "LogoPictureBox";
             this.LogoPictureBox.Size = new System.Drawing.Size(702, 358);
@@ -63,6 +64,7 @@
             // SplashLabel
             // 
             this.SplashLabel.AutoSize = true;
+            this.SplashLabel.BackColor = System.Drawing.Color.LightSlateGray;
             this.SplashLabel.Font = new System.Drawing.Font("Arial", 30F);
             this.SplashLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.SplashLabel.Location = new System.Drawing.Point(235, 439);
@@ -75,7 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BackColor = System.Drawing.Color.Orange;
             this.ClientSize = new System.Drawing.Size(800, 600);
             this.ControlBox = false;
             this.Controls.Add(this.SplashLabel);
@@ -83,6 +85,7 @@
             this.Controls.Add(this.SplashProgressBar);
             this.Font = new System.Drawing.Font("Arial", 20F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "SplashScreen";
             this.Opacity = 0.9D;

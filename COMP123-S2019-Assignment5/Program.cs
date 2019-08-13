@@ -4,7 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using COMP123_S2019_Assignment5.Models;
-
+/// <summary>
+/// APP NAME: Dollar Computer
+/// AUTHOR'S NAME: Vu Hieu Phong
+/// STUDENT ID: 301049781
+/// APP CREATION DATE: August 13th 2018
+/// APP DESCRIPTION: This app helps to develop a hardware buying UI 
+/// this is the driver class of the app
+/// </summary>
 namespace COMP123_S2019_Assignment5
 {
     static class Program

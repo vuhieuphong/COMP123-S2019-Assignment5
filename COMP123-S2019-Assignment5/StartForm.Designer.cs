@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForm));
             this.StartOrderButton = new System.Windows.Forms.Button();
             this.LoadOrderButton = new System.Windows.Forms.Button();
             this.ExitProgramButton = new System.Windows.Forms.Button();
@@ -37,6 +38,7 @@
             // 
             // StartOrderButton
             // 
+            this.StartOrderButton.Font = new System.Drawing.Font("Arial", 16F);
             this.StartOrderButton.Location = new System.Drawing.Point(87, 387);
             this.StartOrderButton.Name = "StartOrderButton";
             this.StartOrderButton.Size = new System.Drawing.Size(276, 47);
@@ -47,6 +49,7 @@
             // 
             // LoadOrderButton
             // 
+            this.LoadOrderButton.Font = new System.Drawing.Font("Arial", 16F);
             this.LoadOrderButton.Location = new System.Drawing.Point(398, 387);
             this.LoadOrderButton.Name = "LoadOrderButton";
             this.LoadOrderButton.Size = new System.Drawing.Size(276, 47);
@@ -57,19 +60,24 @@
             // 
             // ExitProgramButton
             // 
+            this.ExitProgramButton.BackColor = System.Drawing.Color.Orange;
+            this.ExitProgramButton.Font = new System.Drawing.Font("Arial", 16F);
+            this.ExitProgramButton.ForeColor = System.Drawing.Color.White;
             this.ExitProgramButton.Location = new System.Drawing.Point(243, 460);
             this.ExitProgramButton.Name = "ExitProgramButton";
             this.ExitProgramButton.Size = new System.Drawing.Size(276, 47);
             this.ExitProgramButton.TabIndex = 2;
             this.ExitProgramButton.Text = "Exit Program";
-            this.ExitProgramButton.UseVisualStyleBackColor = true;
+            this.ExitProgramButton.UseVisualStyleBackColor = false;
             this.ExitProgramButton.Click += new System.EventHandler(this.ExitProgramButton_Click);
             // 
             // StartPictureBox
             // 
+            this.StartPictureBox.Image = global::COMP123_S2019_Assignment5.Properties.Resources.computer_repair_489081568_5783c94e3df78c1e1f3e8664;
             this.StartPictureBox.Location = new System.Drawing.Point(87, 38);
             this.StartPictureBox.Name = "StartPictureBox";
             this.StartPictureBox.Size = new System.Drawing.Size(587, 323);
+            this.StartPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.StartPictureBox.TabIndex = 3;
             this.StartPictureBox.TabStop = false;
             // 
@@ -77,6 +85,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.ControlBox = false;
             this.Controls.Add(this.StartPictureBox);
@@ -85,10 +94,11 @@
             this.Controls.Add(this.StartOrderButton);
             this.Font = new System.Drawing.Font("Arial", 20F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "StartForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Start Form";
+            this.Text = "Welcome to Dollar Computer!";
             ((System.ComponentModel.ISupportInitialize)(this.StartPictureBox)).EndInit();
             this.ResumeLayout(false);
 

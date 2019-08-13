@@ -9,7 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using COMP123_S2019_Assignment5.Models;
-
+/// <summary>
+/// APP NAME: Dollar Computer
+/// AUTHOR'S NAME: Vu Hieu Phong
+/// STUDENT ID: 301049781
+/// APP CREATION DATE: August 13th 2018
+/// APP DESCRIPTION: This app helps to develop a hardware buying UI 
+/// this is the form that lets users select their hardware
+/// </summary>
 namespace COMP123_S2019_Assignment5
 {
     public partial class SelectForm : Form
@@ -19,19 +26,35 @@ namespace COMP123_S2019_Assignment5
             InitializeComponent();
         }
 
+        /// <summary>
+        /// this is the event handler for the click event of the cancel button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// this is the event handler for the click event of the next button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NextButton_Click(object sender, EventArgs e)
         {
             Program.Forms[FormNames.PRODUCT_INFO_FORM].Show();
             this.Hide();           
         }
 
+        /// <summary>
+        /// this is the event handler for the load event of the select form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectForm_Load(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             using(var db = new ProductModel())
             {
                 db.products.Load();
@@ -44,7 +67,11 @@ namespace COMP123_S2019_Assignment5
             SelectedHardwareTextBox.Text=string.Empty;
             NextButton.Enabled = false;
         }
-
+        /// <summary>
+        /// this is the event handler for the selection changed event of hardware select grid view
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void HardwareSelectGridView_SelectionChanged(object sender, EventArgs e)
         {
             if (HardwareSelectGridView.CurrentCell != null)
@@ -92,12 +119,6 @@ namespace COMP123_S2019_Assignment5
                 Program.product.power = cells[29].Value.ToString();
                 Program.product.webcam = cells[30].Value.ToString();
             }
-        }
-
-        private void SelectForm_Shown(object sender, EventArgs e)
-        {
-            HardwareSelectGridView.ClearSelection();
-            HardwareSelectGridView.Rows[0].Cells[0].Selected = false;
         }
     }
 }

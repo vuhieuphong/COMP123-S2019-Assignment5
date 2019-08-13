@@ -63,9 +63,29 @@ namespace COMP123_S2019_Assignment5.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _459176_dell_precision_5720_aio {
+            get {
+                object obj = ResourceManager.GetObject("459176-dell-precision-5720-aio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap computer_repair_489081568_5783c94e3df78c1e1f3e8664 {
             get {
                 object obj = ResourceManager.GetObject("computer-repair-489081568-5783c94e3df78c1e1f3e8664", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap personal_computer_0 {
+            get {
+                object obj = ResourceManager.GetObject("personal-computer_0", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

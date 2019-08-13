@@ -8,7 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/// <summary>
+/// APP NAME: Dollar Computer
+/// AUTHOR'S NAME: Vu Hieu Phong
+/// STUDENT ID: 301049781
+/// APP CREATION DATE: August 13th 2018
+/// APP DESCRIPTION: This app helps to develop a hardware buying UI 
+/// this is the form that displays the chosen hardware information
+/// </summary>
 namespace COMP123_S2019_Assignment5
 {
     public partial class ProductInfoForm : Form
@@ -18,17 +25,32 @@ namespace COMP123_S2019_Assignment5
             InitializeComponent();
         }
         
+        /// <summary>
+        /// this is the event handler for the click event of select another product button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectAnotherProductButton_Click(object sender, EventArgs e)
         {
             Program.Forms[FormNames.SELECT_FORM].Show();
             this.Hide();
         }
 
+        /// <summary>
+        /// this si the event handler for the click event of the cancel button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// this is the event handler for the click event of the next button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NextButton_Click(object sender, EventArgs e)
         {
             Program.Forms[FormNames.ORDER_FORM].Show();
@@ -37,6 +59,11 @@ namespace COMP123_S2019_Assignment5
             NextButton.Enabled = false;
         }
 
+        /// <summary>
+        /// this is the event handler for the activated event of the product info form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ProductInfoForm_Activated(object sender, EventArgs e)
         {
             ProductIDButton.Text = Program.product.productID.ToString();
@@ -73,7 +100,11 @@ namespace COMP123_S2019_Assignment5
             OpticalDriveButton.Text = Program.product.optical_drive;
             AudioTypeButton.Text = Program.product.Audio_type;
         }
-
+        /// <summary>
+        /// this is the event handler for the click event of save tool strip menu item
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // configure the file dialog
@@ -133,6 +164,11 @@ namespace COMP123_S2019_Assignment5
             }
         }
         
+        /// <summary>
+        /// this is the event handler for the click event of the open tool strip menu item
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // configure the file dialog
@@ -152,43 +188,49 @@ namespace COMP123_S2019_Assignment5
                         File.Open(ProductOpenFileDialog.FileName, FileMode.Open)))
                     {
                         // Read stuff into the Student class
-                        Program.product.productID = short.Parse(inputStream.ReadLine());
-                        Program.product.cost = decimal.Parse(inputStream.ReadLine());
-                        Program.product.manufacturer = inputStream.ReadLine();
-                        Program.product.model = inputStream.ReadLine();
-                        Program.product.RAM_type = inputStream.ReadLine();
-                        Program.product.RAM_size = inputStream.ReadLine();
-                        Program.product.displaytype = inputStream.ReadLine();
-                        Program.product.screensize = inputStream.ReadLine();
-                        Program.product.resolution = inputStream.ReadLine();
-                        Program.product.CPU_Class = inputStream.ReadLine();
-                        Program.product.CPU_brand = inputStream.ReadLine();
-                        Program.product.CPU_type = inputStream.ReadLine();
-                        Program.product.CPU_speed = inputStream.ReadLine();
-                        Program.product.CPU_number = inputStream.ReadLine();
-                        Program.product.condition = inputStream.ReadLine();
-                        Program.product.OS = inputStream.ReadLine();
-                        Program.product.platform = inputStream.ReadLine();
-                        Program.product.HDD_size = inputStream.ReadLine(); 
-                        Program.product.HDD_speed = inputStream.ReadLine();
-                        Program.product.GPU_Type = inputStream.ReadLine();
-                        Program.product.optical_drive = inputStream.ReadLine();
-                        Program.product.Audio_type = inputStream.ReadLine();
-                        Program.product.LAN = inputStream.ReadLine();
-                        Program.product.WIFI = inputStream.ReadLine();
-                        Program.product.width = inputStream.ReadLine();
-                        Program.product.height = inputStream.ReadLine();
-                        Program.product.depth = inputStream.ReadLine();
-                        Program.product.weight = inputStream.ReadLine();
-                        Program.product.moust_type = inputStream.ReadLine();
-                        Program.product.power = inputStream.ReadLine();
-                        Program.product.webcam = inputStream.ReadLine();
-
+                        try
+                        {
+                            Program.product.productID = short.Parse(inputStream.ReadLine());
+                            Program.product.cost = decimal.Parse(inputStream.ReadLine());
+                            Program.product.manufacturer = inputStream.ReadLine();
+                            Program.product.model = inputStream.ReadLine();
+                            Program.product.RAM_type = inputStream.ReadLine();
+                            Program.product.RAM_size = inputStream.ReadLine();
+                            Program.product.displaytype = inputStream.ReadLine();
+                            Program.product.screensize = inputStream.ReadLine();
+                            Program.product.resolution = inputStream.ReadLine();
+                            Program.product.CPU_Class = inputStream.ReadLine();
+                            Program.product.CPU_brand = inputStream.ReadLine();
+                            Program.product.CPU_type = inputStream.ReadLine();
+                            Program.product.CPU_speed = inputStream.ReadLine();
+                            Program.product.CPU_number = inputStream.ReadLine();
+                            Program.product.condition = inputStream.ReadLine();
+                            Program.product.OS = inputStream.ReadLine();
+                            Program.product.platform = inputStream.ReadLine();
+                            Program.product.HDD_size = inputStream.ReadLine();
+                            Program.product.HDD_speed = inputStream.ReadLine();
+                            Program.product.GPU_Type = inputStream.ReadLine();
+                            Program.product.optical_drive = inputStream.ReadLine();
+                            Program.product.Audio_type = inputStream.ReadLine();
+                            Program.product.LAN = inputStream.ReadLine();
+                            Program.product.WIFI = inputStream.ReadLine();
+                            Program.product.width = inputStream.ReadLine();
+                            Program.product.height = inputStream.ReadLine();
+                            Program.product.depth = inputStream.ReadLine();
+                            Program.product.weight = inputStream.ReadLine();
+                            Program.product.moust_type = inputStream.ReadLine();
+                            Program.product.power = inputStream.ReadLine();
+                            Program.product.webcam = inputStream.ReadLine();
+                            NextButton_Click(sender, e);
+                        }
+                        catch(FormatException exception)
+                        {
+                            MessageBox.Show("Error:" + exception.Message, "Format Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         // cleanup
                         inputStream.Close();
                         inputStream.Dispose();
-                        //automatically click next to next form
-                        NextButton_Click(sender, e);
+                        //automatically click next to next form             
                     }
                 }
                 catch (IOException exception)
@@ -198,9 +240,11 @@ namespace COMP123_S2019_Assignment5
             }
             else
             {
-                if(ProductIDButton.Text=="0")
+                //this is to handle the exception when the user clicks the cancel button when loading
+                //the file from the Start Form
+                if (ProductIDButton.Text == "0")
                 {
-                    MessageBox.Show("Please restart your order!");
+                    MessageBox.Show("Please restart your order!", "Load Order Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Program.Forms[FormNames.START_FORM].Show();
                     this.Hide();
                 }

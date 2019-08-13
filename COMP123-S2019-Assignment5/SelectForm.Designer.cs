@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectForm));
             this.SelectLabel = new System.Windows.Forms.Label();
             this.HardwareSelectGridView = new System.Windows.Forms.DataGridView();
             this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,11 +75,12 @@
             // SelectLabel
             // 
             this.SelectLabel.AutoSize = true;
-            this.SelectLabel.Font = new System.Drawing.Font("Arial", 20F);
-            this.SelectLabel.Location = new System.Drawing.Point(13, 7);
+            this.SelectLabel.Font = new System.Drawing.Font("Arial", 18F);
+            this.SelectLabel.ForeColor = System.Drawing.Color.White;
+            this.SelectLabel.Location = new System.Drawing.Point(38, 9);
             this.SelectLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.SelectLabel.Name = "SelectLabel";
-            this.SelectLabel.Size = new System.Drawing.Size(286, 32);
+            this.SelectLabel.Size = new System.Drawing.Size(252, 27);
             this.SelectLabel.TabIndex = 0;
             this.SelectLabel.Text = "Select Your Hardware:";
             // 
@@ -420,8 +422,9 @@
             // 
             // YourSelectionLabel
             // 
-            this.YourSelectionLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.YourSelectionLabel.BackColor = System.Drawing.Color.LightSlateGray;
             this.YourSelectionLabel.Font = new System.Drawing.Font("Arial", 18F);
+            this.YourSelectionLabel.ForeColor = System.Drawing.Color.White;
             this.YourSelectionLabel.Location = new System.Drawing.Point(112, 598);
             this.YourSelectionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.YourSelectionLabel.Name = "YourSelectionLabel";
@@ -443,32 +446,37 @@
             // 
             // SelectFormCancelButton
             // 
-            this.SelectFormCancelButton.Font = new System.Drawing.Font("Arial", 18F);
-            this.SelectFormCancelButton.Location = new System.Drawing.Point(606, 663);
+            this.SelectFormCancelButton.BackColor = System.Drawing.Color.Orange;
+            this.SelectFormCancelButton.Font = new System.Drawing.Font("Arial", 16F);
+            this.SelectFormCancelButton.ForeColor = System.Drawing.Color.White;
+            this.SelectFormCancelButton.Location = new System.Drawing.Point(556, 663);
             this.SelectFormCancelButton.Margin = new System.Windows.Forms.Padding(2);
             this.SelectFormCancelButton.Name = "SelectFormCancelButton";
-            this.SelectFormCancelButton.Size = new System.Drawing.Size(112, 39);
+            this.SelectFormCancelButton.Size = new System.Drawing.Size(129, 39);
             this.SelectFormCancelButton.TabIndex = 4;
             this.SelectFormCancelButton.Text = "Cancel";
-            this.SelectFormCancelButton.UseVisualStyleBackColor = true;
+            this.SelectFormCancelButton.UseVisualStyleBackColor = false;
             this.SelectFormCancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // NextButton
             // 
-            this.NextButton.Font = new System.Drawing.Font("Arial", 18F);
-            this.NextButton.Location = new System.Drawing.Point(743, 663);
+            this.NextButton.BackColor = System.Drawing.Color.YellowGreen;
+            this.NextButton.Font = new System.Drawing.Font("Arial", 16F);
+            this.NextButton.ForeColor = System.Drawing.Color.White;
+            this.NextButton.Location = new System.Drawing.Point(723, 663);
             this.NextButton.Margin = new System.Windows.Forms.Padding(2);
             this.NextButton.Name = "NextButton";
-            this.NextButton.Size = new System.Drawing.Size(112, 39);
+            this.NextButton.Size = new System.Drawing.Size(132, 39);
             this.NextButton.TabIndex = 5;
             this.NextButton.Text = "Next";
-            this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.UseVisualStyleBackColor = false;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // SelectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(984, 761);
             this.ControlBox = false;
             this.Controls.Add(this.NextButton);
@@ -479,10 +487,11 @@
             this.Controls.Add(this.SelectLabel);
             this.Font = new System.Drawing.Font("Arial", 16F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "SelectForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Select Form";
+            this.Text = "Select Your Hardware!";
             this.Load += new System.EventHandler(this.SelectForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HardwareSelectGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();

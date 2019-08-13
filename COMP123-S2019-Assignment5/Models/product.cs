@@ -5,7 +5,14 @@ namespace COMP123_S2019_Assignment5.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
-
+    /// <summary>
+    /// APP NAME: Dollar Computer
+    /// AUTHOR'S NAME: Vu Hieu Phong
+    /// STUDENT ID: 301049781
+    /// APP CREATION DATE: August 13th 2018
+    /// APP DESCRIPTION: This app helps to develop a hardware buying UI 
+    /// this is the product class for the database
+    /// </summary>
     public partial class Product
     {
         public short productID { get; set; }
